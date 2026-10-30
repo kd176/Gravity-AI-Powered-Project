@@ -22,7 +22,7 @@ jobs:
       - name: Lint and type-check Python
         run: ruff check . && ruff format --check . && mypy
       - name: Test Python with coverage
-        run: pytest
+        run: python -m pytest
       - name: Install web dependencies
         working-directory: web
         run: npm ci
